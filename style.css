@@ -1,0 +1,487 @@
+/* --- 1. Variables and Global Reset --- */
+:root {
+    --primary-color: #00ffc4; /* Futuristic Neon Green/Aqua */
+    --secondary-color: #0d1117; /* Deep Charcoal/Black Background */
+    --card-dark: #161b22; /* Darker Card Background */
+    --text-light: #e6edf3;
+    --text-dark: #8b949e;
+    --padding-section: 100px 25px;
+    --border-radius: 12px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    color: var(--text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-color: var(--secondary-color);
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.section {
+    padding: var(--padding-section);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.light-bg {
+    background-color: var(--card-dark); 
+}
+
+/* --- Section Title - Neon Glow --- */
+.section-title {
+    font-size: 3em; 
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 255, 196, 0.4); 
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 14px 30px; 
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+    border: 1px solid var(--primary-color);
+    font-weight: 600;
+    margin-right: 15px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 255, 196, 0.2); 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.primary-btn {
+    background: var(--primary-color); 
+    color: var(--secondary-color);
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--text-light);
+    border-color: var(--text-dark);
+    box-shadow: none;
+}
+
+.secondary-btn:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* --- 2. Navigation Bar (Header) --- */
+header {
+    background-color: var(--card-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for mobile layout prep */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 25px; 
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    font-weight: 800;
+    text-shadow: 0 0 4px var(--primary-color);
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Desktop Fix: Hamburger is hidden by default */
+.hamburger {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6em; 
+    color: var(--primary-color);
+    z-index: 1001; 
+}
+
+/* --- 3. Hero Section --- */
+.hero-section {
+    background-color: var(--secondary-color);
+    padding: 120px 25px; 
+    text-align: center;
+}
+
+.image1-img {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 255, 196, 0.6);
+}
+
+.intro-text {
+    color: var(--text-dark);
+    font-size: 1.1em;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* --- 4. About Section --- */
+.about-section {
+    background-color: var(--secondary-color);
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.about-text strong {
+    color: var(--text-light);
+}
+
+.about-details {
+    background: var(--card-dark);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-details ul {
+    list-style: none;
+}
+
+.about-details li {
+    padding: 10px 0;
+    color: var(--text-dark);
+    font-size: 0.95em;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+.about-details li:last-child {
+    border-bottom: none;
+}
+
+.about-details i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* --- 5. Education/Experience Timeline --- */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: var(--card-dark);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 255, 196, 0.1);
+    transition: transform 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 255, 196, 0.5);
+}
+
+.timeline-item h3 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+}
+
+.timeline-item .institution, .company {
+    font-size: 1em;
+    color: var(--text-light);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.timeline-item p, .score {
+    color: var(--text-dark);
+    font-size: 0.95em;
+}
+
+.timeline-item ul {
+    list-style-type: '⚡';
+    margin-left: 20px;
+    margin-top: 10px;
+    color: var(--text-dark);
+}
+
+.timeline-item li {
+    margin-bottom: 5px;
+}
+.timeline-item li strong {
+    color: var(--text-light);
+}
+
+/* --- 6. Skills Section --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05); /* Slightly transparent */
+    padding: 30px 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 255, 196, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.skill-item:hover {
+    background: rgba(0, 255, 196, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--primary-color);
+}
+
+.skill-item i {
+    color: var(--primary-color);
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.skill-item h4 {
+    font-size: 1.2em;
+    color: var(--text-light);
+}
+
+.skill-item p {
+    color: var(--text-dark);
+    font-size: 0.9em;
+}
+
+/* --- 7. Contact Section --- */
+.contact-intro {
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background: var(--card-dark);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
+    outline: none;
+}
+
+.contact-form input:-webkit-autofill,
+.contact-form textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--card-dark) inset !important; 
+    -webkit-text-fill-color: var(--text-light) !important;
+}
+
+.contact-form input:focus:-webkit-autofill,
+.contact-form textarea:focus:-webkit-autofill {
+    -webkit-box-shadow: 
+        0 0 8px var(--primary-color), 
+        0 0 0 1000px var(--card-dark) inset !important;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+
+/* Social Links */
+.social-links {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.social-links a {
+    color: var(--text-dark);
+    font-size: 2.5em;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1);
+    text-shadow: 0 0 15px var(--primary-color);
+}
+
+/* --- 8. Footer --- */
+footer {
+    background-color: var(--card-dark);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 3px solid var(--primary-color);
+}
+
+/* --- 9. Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.2em;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 30px;
+    }
+
+    /* Show Hamburger button only on mobile */
+    .hamburger {
+        display: block; 
+    }
+    
+    /* Nav Links on Mobile */
+    .nav-links {
+        /* Default position - Hidden off-screen to the right */
+        position: fixed;
+        top: 0; 
+        right: -100%; 
+        width: 75%;
+        height: 100vh;
+        background-color: var(--card-dark);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        padding: 100px 30px 30px; /* Space for the header */
+        transition: right 0.4s ease-in-out;
+        z-index: 999;
+        
+    }
+    
+    /* Class added by JS to show the menu */
+    .nav-links.active {
+         right: 0; /* Move into view */
+    }
+    
+    .nav-links a {
+        margin: 15px 0;
+        color: var(--text-light);
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: left;
+    }
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .contact-form button {
+        width: 100%;
+        text-align: center;
+    }
+}

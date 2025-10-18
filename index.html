@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj G. Singh | BScIT & Management Portfolio</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Suraj Singh</h1>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <img src="images/image1.jpg" alt="Suraj Singh Profile Photo" class="image1-img"> 
+                <p class="intro-text">Hello, I'm</p>
+                <h1>SURAJ G. SINGH</h1>
+                <h2>Final Year BScIT Student | Tech & Operations Manager</h2>
+                <a href="Suraj_Singh_Resume.pdf" class="btn primary-btn" download>Download Resume</a>
+                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am a **Final Year BScIT student** with a unique blend of technical knowledge and three years of hands-on management experience in the medical sector. My background includes successfully handling end-to-end **purchase management**, overseeing **inventory software operations**, and ensuring efficient cash flow.</p>
+                    <p>I am passionate about leveraging my **IT skills (HTML, CSS, JavaScript)** to build efficient systems and transition my proven operational expertise into the technology domain. I bring strong analytical skills, meticulous attention to detail, and a results-driven attitude.</p>
+                </div>
+                <div class="about-details">
+                    <h3>Personal Details</h3>
+                    <ul>
+                        <li><i class="fas fa-user"></i> <strong>Full Name:</strong> Suraj Gaurishankar Singh</li>
+                        <li><i class="fas fa-calendar-alt"></i> <strong>D.O.B:</strong> 22 / 12 / 2003</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Email:</strong>surajsingh7039676@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 7039676294</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section light-bg">
+            <h2 class="section-title">Education & Academics</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>BScIT (Bachelor of Science in Information Technology)</h3>
+                    <p class="institution">Bhavance College Andheri(W) | *Expected Completion: 2026*</p>
+                    <p>Focused on web development, database management, and networking principles. Currently in the final year.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Higher Secondary School (12th Grade - Science)</h3>
+                    <p class="institution">School Name | Completion Year</p>
+                    <p class="score">Percentage: 84%</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Secondary School (10th Grade)</h3>
+                    <p class="institution">School Name | Completion Year</p>
+                    <p class="score">Percentage: 80%</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Purchase Manager & Software Handler (2 Years)</h3>
+                    <p class="company">Medical Retail Store | City, State</p>
+                    <ul>
+                        <li>**Managed end-to-end purchasing** for medical supplies and pharmaceuticals, optimizing inventory levels by 20%.</li>
+                        <li>**Handled and maintained proprietary medical inventory/POS software**, including system troubleshooting and staff training.</li>
+                        <li>Ensured data accuracy and generated crucial business reports for stock analysis.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Cashier (1 Year)</h3>
+                    <p class="company">Medical Retail Store | City, State</p>
+                    <ul>
+                        <li>Managed daily cash transactions and billing with zero discrepancies.</li>
+                        <li>Provided excellent customer service and handled sensitive data securely.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section light-bg">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Web Technology</h4>
+                    <p>HTML5, CSS3, JavaScript (Foundational), VS Code.</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h4>Software Management</h4>
+                    <p>POS/Inventory System Handling, Troubleshooting, Data Entry, Reporting.</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-tasks"></i>
+                    <h4>Purchase & Inventory</h4>
+                    <p>Vendor Management, Price Negotiation, Stock Optimization, Supply Chain.</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Business Operations</h4>
+                    <p>Cash Management, Billing, Customer Relations, Team Coordination.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="contact-intro">I am actively looking for opportunities where I can combine my technical knowledge with my management experience.</p>
+            
+            <form onsubmit="sendToWhatsApp(event)" class="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea rows="5" id="message" placeholder="Your Message..." required></textarea>
+                <button type="submit" class="btn primary-btn">Send Message via WhatsApp</button>
+            </form>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/18_surajsinghrajput?igsh=MW01MHo1aXZ0Y2lyMg%3D%3D&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1FNffAzXJ5/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/suraj-singh-0277ba31b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Suraj G. Singh. All rights reserved. Designed with HTML, CSS & JS.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
